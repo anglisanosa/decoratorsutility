@@ -4,5 +4,8 @@ API Guide
 Model Class
 -----------
 
-.. automodule:: decoratorsutility.<module_name>
+.. automodule:: decoratorsutility.decorators
+   :members:
+
+.. autoclass:: decoratorsutility.decorators._Timer
    :members:

@@ -1,42 +1,63 @@
-# Project Readme
-decorators utility
-
-# PathUtils
+# decoratorsutility
 
 ## Introduction
-PathUtils is a utility class for handling various path-related operations in Python. It provides methods for retrieving file information, checking file existence, creating directories, detecting file encoding, and listing files in a directory.
+This Python package provides decorators to handle exceptions, measure execution time, and set timeouts.
 
 ## Installation
-To install PathUtils, simply use pip:
+To install decoratorsutility, simply use pip:
 
 ```bash
-pip install pathutility
+pip install decoratorsutility
 
 ```
 
 ## Usage Example
-Here's an example of how to use the PathUtils class:
+
+### `exception_dec`
+
+Decorator to handle exceptions by logging errors to a specified file path.
 
 ```python
-from pathutility import PathUtils
-
-# Create an instance of PathUtils
-path_util = PathUtils()
-
-# Get file information
-file_path = '/path/to/file.txt'
-print(f"File name: {path_util.get_filename(file_path)}")
-print(f"File size: {path_util.get_file_size(file_path)} bytes")
-print(f"File creation time: {path_util.get_file_creation_time(file_path)}")
-
-# List files in a directory
-directory_path = '/path/to/directory'
-files_list = path_util.list_files_in_directory(directory_path)
-print(f"Files in directory: {files_list}")
+@exception_dec('module_name', '/path/to/logfile.log')
+def function_name(*args, **kwargs):
+    try:
+        # Function execution
+        return func(*args, **kwargs)
+    except Exception as err:
+        # Logs the error to the specified file path
+        log_error(module=exc_mod, file_path=exc_path, error=err)
+        logging.error(err)
 ```
 
+### `repeat_on_error`
+
+Decorator to retry function execution a set number of times in case of exceptions.
+
+```python
+@repeat_on_error(max_try=3, error_log='log/logfile.log', show_error=True)
+def test_dummy(arg1:int):
+    return arg1/0
+```
+
+### `timeout_decorator`
+
+Decorator to set a timeout for a function.
+
+```python
+from decoratorsutility.decorators import timeout_decorator
+
+@timeout_decorator(timeout=5)
+def my_function():
+    time.sleep(6)  # Simulate a long-running function
+    return "Success!"
+```
+
+
 ## Documentation
-The Sphinx-generated documentation for PathUtils can be found [here](https://anglisanosa.github.io/pathutility/).
+The Sphinx-generated documentation for PathUtils can be found [here](https://anglisanosa.github.io/decoratorsutility/).
 
 ## Contribution
-Feel free to contribute by submitting issues [here](https://github.com/anglisanosa/pathutility/issues).
+Feel free to contribute by submitting issues [here](https://github.com/anglisanosa/decoratorsutility/issues).
+
+
+

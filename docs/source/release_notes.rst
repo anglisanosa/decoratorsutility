@@ -9,8 +9,8 @@ Relase Notes
    * - Version
      - Authors
      - Release Notes
-   * - <version>
+   * - 1.0.0
      - anglisanosa AI team
-     - Here the comments of the release.
+     - First decorators Relase.
    
 
