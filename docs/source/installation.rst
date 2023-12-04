@@ -23,16 +23,10 @@ The SDK needs some packages to be installed in order to be able to run:
             +----------------------+--------------+
             | Package              | Version      |
             +======================+==============+
-            | numpy                | >= 1.16.3    |
+            | pathutility          | >= 1.0.0     |
             +----------------------+--------------+
-            | opencv-python        | >= 3.4.16.59 |
+            | pygogo               | >= 1.3.0     |
             +----------------------+--------------+
-            | rknn / rknnlite      | >= 1.7.1     |
-            +----------------------+--------------+
-            | rockchipinferenceapi | >= 0.3.1     |
-            +----------------------+--------------+
-
-.. note:: **rockchipinferenceapi** will be provided by anglisanosa in wheel format.
 
 
 SDK installation via pip
