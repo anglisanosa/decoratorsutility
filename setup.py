@@ -14,7 +14,7 @@ def get_version() -> float:
     specs = {}
     version_var = '__version__'
     version_file = os.path.join(
-        PKG_ROOT, c, '_version.py'
+        PKG_ROOT, 'decoratorsutility', '_version.py'
     )
 
     with open(version_file, 'r') as file:
