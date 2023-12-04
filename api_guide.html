@@ -1,0 +1,235 @@
+ <!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API Guide &mdash; decoratorsutility 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="_static/_static/custom.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=8d563738"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Getting started" href="getting_started.html" />
+<link href=" _static/custom.css" rel="stylesheet" type="text/css">
+ 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: linear-gradient(125deg, hsl(193deg 47% 4%) 0%, hsl(193deg 33% 9%) 9%, hsl(193deg 42% 12%) 16%, hsl(192deg 49% 15%) 23%, hsl(192deg 57% 18%) 29%, hsl(191deg 65% 21%) 36%, hsl(191deg 65% 24%) 44%, hsl(191deg 64% 28%) 53%, hsl(191deg 64% 31%) 63%, hsl(190deg 64% 34%) 76%, hsl(190deg 65% 38%) 100%);" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            decoratorsutility
+          </a>
+              <div class="version">
+                1.0.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="release_notes.html">Relase Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-decoratorsutility.decorators">Model Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#decoratorsutility.decorators.exception_dec"><code class="docutils literal notranslate"><span class="pre">exception_dec()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#decoratorsutility.decorators.repeat_on_error"><code class="docutils literal notranslate"><span class="pre">repeat_on_error()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#decoratorsutility.decorators.timeout_decorator"><code class="docutils literal notranslate"><span class="pre">timeout_decorator()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#decoratorsutility.decorators._Timer"><code class="docutils literal notranslate"><span class="pre">_Timer</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: linear-gradient(125deg, hsl(193deg 47% 4%) 0%, hsl(193deg 33% 9%) 9%, hsl(193deg 42% 12%) 16%, hsl(192deg 49% 15%) 23%, hsl(192deg 57% 18%) 29%, hsl(191deg 65% 21%) 36%, hsl(191deg 65% 24%) 44%, hsl(191deg 64% 28%) 53%, hsl(191deg 64% 31%) 63%, hsl(190deg 64% 34%) 76%, hsl(190deg 65% 38%) 100%);" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">decoratorsutility</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">API Guide</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="api-guide">
+<h1>API Guide<a class="headerlink" href="#api-guide" title="Link to this heading"></a></h1>
+<section id="module-decoratorsutility.decorators">
+<span id="model-class"></span><h2>Model Class<a class="headerlink" href="#module-decoratorsutility.decorators" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="decoratorsutility.decorators.exception_dec">
+<span class="sig-prename descclassname"><span class="pre">decoratorsutility.decorators.</span></span><span class="sig-name descname"><span class="pre">exception_dec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exc_mod</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exc_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#decoratorsutility.decorators.exception_dec" title="Link to this definition"></a></dt>
+<dd><p>Decorator that handles exceptions by logging errors to a specified file path.</p>
+<p>Args:
+- exc_mod (str): The module being executed.
+- exc_path (str): The path where the output file will be stored.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Usage<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@exception_dec</span><span class="p">(</span><span class="s1">&#39;module_name&#39;</span><span class="p">,</span> <span class="s1">&#39;/path/to/logfile.log&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">function_name</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># Function execution</span>
+        <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+        <span class="c1"># Logs the error to the specified file path</span>
+        <span class="n">log_error</span><span class="p">(</span><span class="n">module</span><span class="o">=</span><span class="n">exc_mod</span><span class="p">,</span> <span class="n">file_path</span><span class="o">=</span><span class="n">exc_path</span><span class="p">,</span> <span class="n">error</span><span class="o">=</span><span class="n">err</span><span class="p">)</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="decoratorsutility.decorators.repeat_on_error">
+<span class="sig-prename descclassname"><span class="pre">decoratorsutility.decorators.</span></span><span class="sig-name descname"><span class="pre">repeat_on_error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_try</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_log</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_error</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#decoratorsutility.decorators.repeat_on_error" title="Link to this definition"></a></dt>
+<dd><p>Decorator that retries function execution a set number of times in case of exceptions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>max_try</strong> – Maximum number of retries.</p></li>
+<li><p><strong>error_log</strong> – File path to log errors (txt or csv format).</p></li>
+<li><p><strong>show_error</strong> – Flag to display errors (default is True).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Decorated function.</p>
+</dd>
+<dt class="field-odd">Usage<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@repeat_on_error</span><span class="p">(</span><span class="n">max_try</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">error_log</span><span class="o">=</span><span class="s1">&#39;log/logfile.log&#39;</span><span class="p">,</span> <span class="n">show_error</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">test_dummy</span><span class="p">(</span><span class="n">arg1</span><span class="p">:</span><span class="nb">int</span><span class="p">):</span>
+<span class="k">return</span> <span class="n">arg1</span><span class="o">/</span><span class="mi">0</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">test_dummy</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="decoratorsutility.decorators.timeout_decorator">
+<span class="sig-prename descclassname"><span class="pre">decoratorsutility.decorators.</span></span><span class="sig-name descname"><span class="pre">timeout_decorator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#decoratorsutility.decorators.timeout_decorator" title="Link to this definition"></a></dt>
+<dd><p>decorrator to set a timeout to a function</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>timeout</strong> (<em>int</em>) – time in seconts</p>
+</dd>
+<dt class="field-even">Usage<span class="colon">:</span></dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">svh_utils.decorators</span> <span class="kn">import</span> <span class="n">timeout_decorator</span>
+
+<span class="nd">@timeout_decorator</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">my_function</span><span class="p">():</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>  <span class="c1"># Simulate a long-running function</span>
+    <span class="k">return</span> <span class="s2">&quot;Success!&quot;</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">a</span><span class="o">=</span><span class="n">my_function</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="decoratorsutility.decorators._Timer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">decoratorsutility.decorators.</span></span><span class="sig-name descname"><span class="pre">_Timer</span></span><a class="headerlink" href="#decoratorsutility.decorators._Timer" title="Link to this definition"></a></dt>
+<dd><p>class to estimate the time it takes to run a function 
+and number of executions</p>
+<dl class="field-list simple">
+<dt class="field-odd">Usage<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">decoratorsutility</span> <span class="kn">import</span> <span class="n">timer_decorator</span>
+
+
+<span class="nd">@timer_decorator</span>
+<span class="k">def</span> <span class="nf">dummy</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">+</span><span class="mi">1</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">dummy</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+<span class="c1">#get the information of the function</span>
+<span class="n">timer_decorator</span><span class="o">.</span><span class="n">data</span>
+<span class="p">{</span><span class="s1">&#39;dummy&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;executions&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;total_time&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">}}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="getting_started.html" class="btn btn-neutral float-left" title="Getting started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023 anglisanosa - Spain..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
