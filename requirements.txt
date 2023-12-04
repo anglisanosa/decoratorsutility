@@ -1,2 +1,2 @@
-
-
+pathutility ~= 1.0.0
+pygogo~=1.3.0
